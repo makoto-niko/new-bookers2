@@ -8,7 +8,11 @@
     "@rails/activestorage": "^6.0.0",
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.0",
+<<<<<<< HEAD
     "bootstrap": "4.5",
+=======
+    "bootstrap": "4.6.2",
+>>>>>>> ffcab96c2a58ab026ee9112d49eae8d1d20e3463
     "jquery": "^3.7.1",
     "popper.js": "^1.16.1",
     "turbolinks": "^5.2.0",
