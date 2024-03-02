@@ -49,14 +49,8 @@ before_action :authenticate_user!
   
   def ensure_correct_user
      @book = Book.find(params[:id])
-<<<<<<< HEAD
       unless @book.user == current_user
         redirect_to books_path
       end
-=======
-     unless @book.user == current_user
-       redirect_to books_path
-     end
->>>>>>> ffcab96c2a58ab026ee9112d49eae8d1d20e3463
   end
 end

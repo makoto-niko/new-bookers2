@@ -3,21 +3,15 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
-<<<<<<< HEAD
+         
+  has_many :favorites, dependent: :destroy
   has_many :books
-=======
-  belongs_to :books
->>>>>>> ffcab96c2a58ab026ee9112d49eae8d1d20e3463
   has_one_attached :profile_image
-
+  has_many :book_comment, dependent: :destroy
   validates :name, length: { minimum: 2, maximum: 20 }, uniqueness: true
   validates :introduction, length: {maximum: 50}
   
-<<<<<<< HEAD
   
-=======
->>>>>>> ffcab96c2a58ab026ee9112d49eae8d1d20e3463
   def get_profile_image
     (profile_image.attached?) ? profile_image : 'no_image.jpg'
   end
