@@ -10,4 +10,8 @@ environment.plugins.prepend(
   })
 )
 
+<<<<<<< HEAD
 module.exports = environment
+=======
+module.exports = environment
+>>>>>>> ffcab96c2a58ab026ee9112d49eae8d1d20e3463

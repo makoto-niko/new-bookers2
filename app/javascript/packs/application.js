@@ -13,6 +13,10 @@ import "bootstrap"
 
 import "../stylesheets/application" 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ffcab96c2a58ab026ee9112d49eae8d1d20e3463
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
