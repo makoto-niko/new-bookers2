@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'groups/new'
-  get 'groups/index'
-  get 'groups/show'
-  get 'groups/edit'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
   root :to =>"homes#top"
@@ -13,6 +9,8 @@ Rails.application.routes.draw do
     resources :book_comments, only: [:create, :destroy]
   end
   resources :users, only: [:index,:show,:edit,:update]
-  resources :groups, only: [:new, :index, :show, :create, :edit, :update]
+  resources :groups, only: [:new, :index, :show, :create, :edit, :update] do
+   resource :group_users, only: [:create, :destroy]  
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
